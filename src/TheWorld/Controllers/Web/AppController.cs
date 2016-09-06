@@ -33,7 +33,16 @@ namespace TheWorld.Controllers.Web
         [HttpPost]
         public IActionResult Contact(ContactViewModel model)
         {
-            _mailService.SendMail(_config["MailSettings:ToAddress"], model.Email, "TheWorld", model.Message);
+            if (!model.Email.Contains("@aucegypt.edu"))
+            {
+                ModelState.AddModelError("", "We need an AUC mail address");
+            }
+            if (ModelState.IsValid)
+            {
+                _mailService.SendMail(_config["MailSettings:ToAddress"], model.Email, "TheWorld", model.Message);
+                ModelState.Clear();
+                ViewBag.UserMessage = "Message Sent";
+            }
             return View();
         }
         public IActionResult About()
