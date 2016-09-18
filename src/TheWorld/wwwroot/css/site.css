@@ -1,6 +1,6 @@
 ﻿
 
-#main {
+/*#main {
     background-color: #eee;
     padding: 4px;
     margin: 0;
@@ -13,7 +13,7 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-}
+}*/
 
 .headshot {
     max-width: 50px;
@@ -27,7 +27,7 @@
 
     .menu li {
         list-style-type: none;
-        display: inline;
+       
     }
 
         .menu li.active {
