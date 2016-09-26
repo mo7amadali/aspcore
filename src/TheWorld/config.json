@@ -1,5 +1,8 @@
 ﻿{
   "MailSettings": {
     "ToAddress": "mohamedal2i@aucegypt.edu"
+  },
+  "ConnectionStrings": {
+    "WorldContextConnection": "Server=(localdb)\\MSSQLLocalDB;Database=WorldDB;Trusted_Connection=true;MutlipleActiveResultSets=true;"
   }
 }
